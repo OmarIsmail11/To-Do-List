@@ -1,6 +1,6 @@
 #include "Task.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 void AddTask(Task ToDoList[], int &Count)
@@ -86,16 +86,19 @@ int main()
         {
             case 1 :
                 AddTask(ToDoList,Count);
+                ViewTasks(ToDoList,Count);
                 break;
             case 2 :
                 cout << "Please enter name of task to be deleted : ";
                 cin >> NameToDelete;
                 DeleteTask(ToDoList,NameToDelete,Count);
+                ViewTasks(ToDoList,Count);
                 break;
             case 3 : 
                 cout << "Please enter name of task to be marked as completed : ";
                 cin >> NameToMarkAsCompleted;
                 MarkAsCompleted(ToDoList,NameToMarkAsCompleted,Count);
+                ViewTasks(ToDoList,Count);
                 break;
             case 4 :
                 ViewTasks(ToDoList,Count);
